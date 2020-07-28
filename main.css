@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue-Thin.woff2') format('woff2'),
+       url('fonts/BebasNeue-Thin.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue-Light.woff2') format('woff2'),
+       url('fonts/BebasNeue-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue-Book.woff2') format('woff2'),
+       url('fonts/BebasNeue-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue-Regular.woff2') format('woff2'),
+       url('fonts/BebasNeue-Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue-Bold.woff2') format('woff2'),
+       url('fonts/BebasNeue-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "Helvetica,", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Шапка */
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background-image: url("images/logo.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 220px;
+  box-shadow: 2px 2px 15px grey;
+}
+
+.main-header .logo {
+  float: left;
+  width: 250px;
+  height: 60px;
+}
+
+.main-header .navigation {
+  float: left;
+}
+
+.main-header .navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-header .navigation li {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 5px;
+}
+
+.main-header .navigation li:last-child {
+  margin-left: 50px;
+  padding-left: 10px;
+  border-left: 2px solid red;
+}
+
+.main-header .navigation li:first-child::before {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: -125px;
+  content: 'КОНФЕРЕНЦИИ:';
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: red;
+}
+
+.main-header .navigation a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.main-header .navigation a:hover {
+  border-bottom: 1px solid red;
+  font-weight: 600;
+}
+
+/* Подвал */
+.main-footer {
+  padding: 25px 0;
+  line-height: 1.5;
+  color: white;
+  background-color: #f24048;
+}
+
+.main-footer p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-left {
+  float: left;
+  width: 600px;
+}
+
+.footer-left p b,
+.footer-right p b {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.footer-left address {
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  color: #ddd;
+}
+
+.footer-right {
+  float: right;
+  width: 500px;
+}
+
+.footer-right .contacts {
+  margin: 5px 0;
+  padding-left: 25px;
+  color: #ddd;
+}
+
+.footer-right a {
+  padding-left: 7px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  line-height: 1.75;
+}
