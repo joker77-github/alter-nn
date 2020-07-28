@@ -1,39 +1,39 @@
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeue-Thin.woff2') format('woff2'),
-       url('fonts/BebasNeue-Thin.woff') format('woff');
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Thin.woff2") format("woff2"),
+       url("fonts/BebasNeue-Thin.woff") format("woff");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeue-Light.woff2') format('woff2'),
-       url('fonts/BebasNeue-Light.woff') format('woff');
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Light.woff2") format("woff2"),
+       url("fonts/BebasNeue-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeue-Book.woff2') format('woff2'),
-       url('fonts/BebasNeue-Book.woff') format('woff');
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Book.woff2") format("woff2"),
+       url("fonts/BebasNeue-Book.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeue-Regular.woff2') format('woff2'),
-       url('fonts/BebasNeue-Regular.woff') format('woff');
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Regular.woff2") format("woff2"),
+       url("fonts/BebasNeue-Regular.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeue-Bold.woff2') format('woff2'),
-       url('fonts/BebasNeue-Bold.woff') format('woff');
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Bold.woff2") format("woff2"),
+       url("fonts/BebasNeue-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -54,7 +54,7 @@ body {
 
 .clearfix::after {
   display: table;
-  content: '';
+  content: "";
   clear: both;
 }
 
@@ -109,15 +109,15 @@ body {
   position: absolute;
   top: 0;
   left: -125px;
-  content: 'КОНФЕРЕНЦИИ:';
-  font-family: 'Bebas Neue', sans-serif;
+  content: "КОНФЕРЕНЦИИ:";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: red;
 }
 
 .main-header .navigation a {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
   font-weight: 400;
   text-decoration: none;
