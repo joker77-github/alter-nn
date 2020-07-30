@@ -84,7 +84,7 @@ body {
 
 .link-pdf {
   padding-left: 50px;
-  background-image: url('images/pdf.svg');
+  background-image: url("images/pdf.svg");
   background-position: 7px center;
   background-size: 30px auto;
   background-repeat: no-repeat;
