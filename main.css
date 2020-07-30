@@ -423,12 +423,13 @@ body {
   }
 
   .conf-all h2 {
+    margin-top: 25px;
     font-size: 30px;
   }
 
   .conf-list li {
     width: 90%;
-    min-height: 375px;
+    min-height: 415px;
   }
 
   .conf-list li:first-child {
@@ -439,5 +440,17 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+
+  .main-footer {
+    margin-top: 25px;
+  }
+
+  .btn {
+    margin: 10px;
+  }
+
+  .details ul {
+    margin-bottom: 15px;
   }
 }
