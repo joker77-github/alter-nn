@@ -62,6 +62,10 @@ body {
   display: none;
 }
 
+.nobreak {
+  white-space: pre-line;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 15px;
@@ -72,6 +76,7 @@ body {
   color: #ddd;
   background-color: #f24048;
   border-radius: 7px;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -83,20 +88,11 @@ body {
 }
 
 .link-pdf {
-  padding-left: 47px;
+  padding-right: 47px;
   background-image: url("images/pdf.svg");
-  background-position: 10px center;
+  background-position: 197px center;
   background-size: 30px;
   background-repeat: no-repeat;
-}
-
-.link-conf {
-  color: #f24048;
-  background-color: #ddd;
-}
-
-.link-conf:hover {
-  color: black;
 }
 
 /* Шапка */
@@ -121,6 +117,7 @@ body {
 
 .main-header .navigation {
   float: left;
+  letter-spacing: 0.05em;
 }
 
 .main-header .navigation ul {
@@ -146,7 +143,7 @@ body {
   display: table;
   position: absolute;
   top: 0;
-  left: -125px;
+  left: -145px;
   content: "КОНФЕРЕНЦИИ:";
   font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
@@ -163,9 +160,26 @@ body {
   color: black;
 }
 
-.main-header .navigation a:hover {
+.main-header .navigation a:visited {
+  border: 0;
+  font-weight: 400;
+}
+
+.main-header .navigation a:hover:not(.active) {
   border-bottom: 1px solid red;
   font-weight: 600;
+}
+
+.main-header .navigation a:active {
+  border-bottom: 1px solid black;
+  font-weight: 600;
+}
+
+.main-header .navigation .active {
+  font-weight: 600;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
 }
 
 /* Подвал */
@@ -240,6 +254,11 @@ body {
   color: #f24048;
 }
 
+.intro {
+  text-align: justify;
+  font-weight: 300;
+}
+
 .conf-all h2 {
   margin-top: 50px;
   padding: 0 50px;
@@ -251,56 +270,68 @@ body {
 }
 
 .conf-list {
-  padding: 0;
-  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -15px;
   list-style: none;
   line-height: normal;
 }
 
 .conf-list li {
   position: relative;
-  float: left;
-  margin: 0 35px 25px 0;
-  padding: 15px;
-  width: 330px;
-  min-height: 525px;
+  flex-basis: 355px;
+  align-self: stretch;
+  margin: 0 15px 35px;
+  min-height: 575px;
   background-color: white;
   box-shadow: 5px 5px 15px grey;
+  border-bottom-left-radius: 25px;
 }
 
-.conf-list li:last-child {
-  margin-right: 0;
+.conf-list img {
+  width: 100%;
 }
 
-.conf-list time {
+.conf-info {
+  padding: 15px;
+}
+
+.conf-info time {
   font-size: 20px;
   font-weight: 300;
   color: #f24048;
 }
 
-.conf-list a {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-
-.conf-list img {
-  width: 100%;
-  min-height: 200px;
-}
-
-.conf-list h3 {
+.conf-info h3 {
   padding: 0;
   margin: 5px 0 10px 0;
   text-transform: uppercase;
   font-weight: 400;
 }
 
-.conf-list small {
+.conf-info small {
   display: inline-block;
   margin-bottom: 5px;
   font-size: 16px;
   text-transform: none;
+}
+
+.link-conf {
+  position: absolute;
+  padding-right: 25px;
+  margin: 0;
+  right: 0;
+  bottom: 15px;
+  color: #f24048;
+  background-color: #ddd;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.link-conf:hover {
+  color: black;
 }
 
 /* Стили для конференций */
@@ -360,15 +391,19 @@ body {
   }
 
   .main-header .logo {
-    padding: 10px;
-    width: 5px;
+    width: 0;
+  }
+
+  .main-header .logo img {
+    width: 80px;
+    height: auto;
   }
 
   .main-header .navigation {
     float: right;
     margin-top: 0;
-    width: 200px;
     line-height: 1.5;
+    letter-spacing: normal;
 }
 
   .main-header .navigation li {
@@ -376,18 +411,29 @@ body {
     text-align: right;
   }
 
-  .main-footer {
-    padding: 0;
+  .main-header .navigation li:first-child::before {
+    content: "";
   }
+
+  .main-footer {
+    padding: 0 0 25px;
+  }
+
+  .main-footer p {
+    margin: 0;
+  }
+
   .main-footer .footer-right,
   .main-footer .footer-left {
     display: block;
-    margin-top: 25px;
+    margin-top: 15px;
     width: 100%;
+    line-height: 1.35;
   }
 
-  .main-header .navigation li:first-child::before {
-    content: "";
+  .footer-left address {
+    margin-top: 5px;
+    font-size: 15px;
   }
 
   blockquote {
@@ -404,6 +450,10 @@ body {
 
   .quota p {
     clear: both;
+    padding: 0;
+  }
+
+  .conf-list {
     padding: 0;
   }
 
@@ -428,15 +478,16 @@ body {
   }
 
   .conf-list li {
-    width: 90%;
-    min-height: 415px;
+    min-width: 295px;
+    min-height: 425px;
   }
 
-  .conf-list li:first-child {
-    min-height: 475px;
+  .conf-list time {
+    font-size: 18px;
   }
 
   .conf-list .link-conf {
+    padding-right: 15px;
     position: absolute;
     bottom: 0;
     right: 0;
