@@ -1,0 +1,1396 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+       url("../fonts/400.woff2") format("woff2"),
+       url("../fonts/400.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+       url("../fonts/500.woff2") format("woff2"),
+       url("../fonts/500.woff") format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+       url("../fonts/600.woff2") format("woff2"),
+       url("../fonts/600.woff") format("woff");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+       url("../fonts/700.woff2") format("woff2"),
+       url("../fonts/700.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 400;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.unvisible,
+.sm-show {
+  display: none;
+}
+
+/* Стили для ссылок и кнопок */
+.link-top {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #141517;
+  cursor: url("../img/pointer.cur"), url("../img/pointer.png"), pointer;
+}
+
+.link-top:hover {
+  color: #FE7865;
+}
+
+.link {
+  display: inline-block;
+  color: #FE7865;
+  cursor: url("../img/pointer.cur"), url("../img/pointer.png"), pointer;
+}
+
+.link:hover {
+  color: #F17D4B;
+}
+
+.link-tel-top {
+  padding-left: 36px;
+  font-size: 18px;
+  line-height: 32px;
+  background-image: url("../img/tel_pink.svg");
+  background-size: 30px 30px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.link-tel-black {
+  padding-left: 50px;
+  font-size: 20px;
+  line-height: 32px;
+  background-image: url("../img/tel_pink.svg");
+  background-size: 30px 30px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.link-adr {
+  margin-bottom: 15px;
+  padding-left: 41px;
+  font-size: 14px;
+  line-height: 22px;
+  background-image: url("../img/env_gray.svg");
+  background-size: 26px 20px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.link-tel-gray {
+  padding-left: 41px;
+  font-size: 16px;
+  line-height: 32px;
+  background-image: url("../img/tel_gray.svg");
+  background-size: 30px 30px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  display: inline-block;
+  height: 75px;
+  padding: 0 40px;
+  font-size: 12px;
+  line-height: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  background-color: #FE7865;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  background-color: #F17D4B;
+}
+
+.btn-show-trip {
+  width: 340px;
+  text-align: left;
+  background-image: url("../img/arrow.svg");
+  background-size: 14px 14px;
+  background-position: 286px 50%;
+  background-repeat: no-repeat;
+}
+
+/* Хедер */
+.header-top {
+  background-color: #FFFFFF;
+}
+
+.header-top .container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.header-logo {
+  width: 57px;
+  height: auto;
+}
+
+.header-navigation {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 480px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-icon {
+  display: none;
+  width: 72px;
+  height: 50px;
+  background-color: #FE7865;
+  background-image: url("../img/menu-icon.svg");
+  background-size: 30px 30px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.header-promo::before {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 860px;
+  z-index: -999;
+  background-color: #C4C4C4;
+  background-image: url("../img/top_bg.jpg");
+  background-size: cover;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.header-promo-content {
+  width: 412px;
+  height: 858px;
+  margin: 0 50px 0 auto;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+h1 {
+  margin: 185px 0 0;
+  padding: 0;
+  font-size: 55px;
+  line-height: 145%;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.header-promo-content p {
+  width: 375px;
+  margin: 30px 0 40px;
+  line-height: 170%;
+}
+
+/* Блок места посещения */
+.all-headers {
+  margin: 95px 0 53px;
+  padding: 0;
+  font-size: 55px;
+  line-height: 145%;
+  font-weight: 600;
+  color: #2C2E3F;
+}
+
+.all-headers::after {
+  position: absolute;
+  margin-top: 20px;
+  display: table;
+  content: "";
+  width: 175px;
+  height: 3px;
+  background-color: #FE7865;
+}
+
+.trip-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -30px;
+  padding: 0;
+  list-style: none;
+}
+
+.trip-item {
+  position: relative;
+  width: 350px;
+  margin: 4px 30px 97px;
+}
+
+.trip-info {
+  width: 350px;
+  margin-bottom: 52px;
+}
+
+.trip-info h2 {
+  margin: 199px 0 64px;
+}
+
+.trip-item-title {
+  position: absolute;
+  left: 67.5px;
+  bottom: 0;
+  z-index: 1;
+  width: 215px;
+  height: 63px;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 63px;
+  font-weight: 500;
+  text-align: center;
+  color: #2C2E3F;
+  background-color: #FFFFFF;
+}
+
+.hover-link {
+  position: absolute;
+  top: 152px;
+  left: 42px;
+  display: none;
+  width: 264px;
+  height: 75px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 75px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.hover-link:hover {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.trip-item:hover img {
+  filter: brightness(0.6);
+}
+
+.trip-item:hover .hover-link {
+  display: inline-block;
+}
+
+/* Секция табы */
+.tabs-and-prices {
+  background-image: url("../img/map_bg.svg");
+  background-size: 1400px auto;
+  background-position: 50% 150px;
+  background-repeat: no-repeat;
+}
+
+.tabs {
+  width: 899px;
+}
+
+.tabs > article {
+  display: none;
+  margin-top: 15px;
+	border-top: 1px solid rgba(44, 46, 63, 0.3);
+}
+
+.tabs h3 {
+  width: 425px;
+}
+
+.img_bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -10;
+}
+
+.country-info {
+  width: 380px;
+  margin-bottom: 50px;
+}
+
+.tabs-content {
+	/* прикрутим анимацию */
+  position: relative;
+  min-height: 596px;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+/* Описываем анимацию свойства opacity */
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+/* Цитаты в табах */
+.country-comment {
+  position: absolute;
+  top: 298px;
+  right: -270px;
+  transform: translate(0,-50%);
+  z-index: 1;
+  width: 322px;
+  height: auto;
+  margin: 0;
+  padding: 30px;
+  background-color: #FFFFFF;
+}
+
+.country-comment h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500;
+  color: #2C2E3F;
+}
+
+.country-comment h4::after {
+  display: table;
+  content: "";
+  width: 68px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #FE7865;
+}
+
+.country-comment p {
+  margin: 32px 0 35px;
+  font-size: 14px;
+  line-height: 200%;
+}
+
+.country-comment img {
+  border-radius: 50%;
+}
+
+.country-comment cite {
+  display: inline-block;
+  vertical-align: top;
+  height: 38px;
+  padding: 0;
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 38px;
+  font-style: normal;
+  font-weight: 500;
+  color: #2C2E3F;
+}
+
+/* Прячем чекбоксы */
+.tabs input {
+	position: absolute;
+  display: none;
+}
+
+/* Стили переключателей вкладок (табов) */
+.tabs label {
+	display: inline-block;
+  width: 205px;
+  margin-right: -2px;
+	font-size: 20px;
+  line-height: 24px;
+	font-weight: 500;
+  text-align: center;
+	color: rgba(44, 46, 63, 0.3);
+}
+
+.tabs label:first-of-type {
+  width: auto;
+  margin-right: 49px;
+  text-align: left;
+}
+
+.tabs label:last-of-type {
+  width: auto;
+  margin-left: 49px;
+  text-align: right;
+}
+
+.tabs label:hover {
+  font-weight: 600;
+  cursor: url("../img/pointer.cur"), url("../img/pointer.png"), pointer;
+}
+
+.tabs input:checked + label {
+	color: #FE7865;
+}
+
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1,
+#tab2:checked~#content-tab2,
+#tab3:checked~#content-tab3,
+#tab4:checked~#content-tab4,
+#tab5:checked~#content-tab5 {
+	display: block;
+}
+
+/* Секция цены */
+.price {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  min-height: 370px;
+  margin-top: 240px;
+}
+
+.price-info {
+  width: 300px;
+}
+
+.price-info p {
+  margin-bottom: 60px;
+  line-height: 170%;
+}
+
+.price-info span {
+  display: table;
+  margin: 0 0 13px 50px;
+  font-size: 22px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #141517;
+}
+
+.tariff-list {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 770px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tariff-item {
+  position: relative;
+  display: block;
+  width: 370px;
+  height: 672px;
+  padding: 40px 30px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.tariff-info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tariff-info > li {
+  position: relative;
+  margin-top: 15px;
+  padding-left: 30px;
+  line-height: 200%;
+}
+
+.tariff-info > li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '✔';
+  color: #FE7865;
+}
+
+.tariff-item .btn {
+  position: absolute;
+  bottom: 30px;
+  left: 183px;
+  transform: translate(-50%, 0);
+  width: 310px;
+  text-align: center;
+}
+
+.tariff-item h3,
+.tariff-item b {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  color: rgba(20, 21, 23, 0.7);
+}
+
+.tariff-item h3 {
+  display: inline-block;
+  width: 218px;
+  margin: 0 0 36px;
+  letter-spacing: -1px;
+}
+
+.tariff-item b {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+}
+
+.tariff-item p {
+  padding-bottom: 28px;
+  margin: 0 0 30px;
+  line-height: 150%;
+  color: #2C2E3F;
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  box-sizing: border-box;
+}
+
+.tariff-item:hover {
+  border: 3px solid #FE7865;
+}
+
+.tariff-item:hover h3,
+.tariff-item:hover b {
+  color: #FE7865;
+}
+
+.tariff-item:hover > p {
+  border-color: #FE7865;
+}
+
+.tariff-item:hover .tariff-info > li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '✔';
+  color: #141517;
+}
+
+/* Форма обратной связи */
+
+/* Цвет placeholder для формы ввода */
+::-webkit-input-placeholder {color: #141517;}
+::-moz-placeholder {color: #141517;}
+:-moz-placeholder {color: #141517;}
+:-ms-input-placeholder {color: #141517;}
+
+.callback {
+  position: relative;
+  margin: 138px 0 170px;
+  height: 455px;
+  background-image: url("../img/form_bg.jpg");
+  background-size: 844px 455px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.callback-info {
+  position: absolute;
+  top: 70px;
+  left: 514px;
+  width: 556px;
+  height: 315px;
+  padding: 0 50px;
+  text-align: center;
+  color: #141517;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+}
+
+.callback-info b {
+  display: block;
+  margin-top: 50px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.callback-info p {
+  margin: 15px 0 24px;
+  line-height: 150%;
+}
+
+.callback-form {
+  position: relative;
+}
+
+.callback-form input {
+  width: 268px;
+  height: 50px;
+  margin: 0 15px 20px 0;
+  padding: 15px;
+  font: inherit;
+  font-size: 14px;
+  color: inherit;
+  background-color: #FFFFFF;
+  outline: none;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  box-sizing: border-box;
+}
+
+.callback-form input:hover,
+.callback-form input:focus {
+  border-color: #FE7865;
+}
+
+.callback-form input:last-of-type {
+  margin-right: 0;
+}
+
+.callback-form input[type=text] {
+  padding-left: 51px;
+}
+
+.callback-form label {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+  color: #141517;
+}
+
+.callback-form label::before {
+  position: absolute;
+  top: -7px;
+  left: -10px;
+  content: "*";
+  color: #FE7865;
+}
+
+.btn-send {
+  width: 176px;
+  height: 50px;
+  padding: 0;
+  line-height: 50px;
+}
+
+/* Футер */
+.page-footer {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-content: justify;
+  width: 100%;
+  margin: 70px auto;
+  color: rgba(20, 21, 23, 0.5);
+}
+
+.page-footer h3 {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #141517;
+}
+
+.future-trip {
+  flex-basis: 350px;
+  margin-right: auto;
+  padding-right: 39px;
+  border-right: 1px solid #D7D9DF;
+}
+
+.future-trip ul {
+  padding: 0;
+  margin: 0;
+  columns: 3 95px;
+  list-style: none;
+}
+
+.future-trip li {
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.company-trip {
+  flex-basis: 320px;
+  padding-left: 49px;
+  border-left: 1px solid #D7D9DF;
+}
+
+.company-trip p {
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.contacts {
+  flex-basis: 267px;
+  padding: 0 35px;
+}
+
+/* Модальные окна */
+
+/*CSS-свойства для заднего фона*/
+.modal {
+  opacity: 0; /*изначально этот блок должен быть прозрачным*/
+  background: rgba(0,0,0,0.7); /*задаём цвет фона*/
+  pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.modal:target {
+  opacity: 1; /*при клике блок становится видимым*/
+  pointer-events: auto; /*теперь по блоку можно кликать мышкой*/
+  overflow-y: auto;
+}
+
+.modal-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-inner {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  width: 728px;
+  height: 444px;
+  background-color: #FBF8F8;
+}
+
+.modal-inner h3 {
+  margin: 0 0 50px;
+  font-size: 25px;
+  line-height: 170%;
+  text-align: center;
+  color: #48494D;
+}
+
+.modal-inner p {
+  align-self: center;
+  text-align: center;
+  font-size: 25px;
+  line-height: 170%;
+  font-weight: 500;
+  color: #48494D;
+}
+
+.order-inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  padding: 0 60px 0 397px;
+  text-align: center;
+  background-image: url("../img/order_bg.jpg");
+  background-size: auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.menu-inner {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 134px 0 0;
+  box-sizing: border-box;
+}
+
+.link-menu {
+  height: 60px;
+  margin-bottom: 30px;
+  padding-left: 16px;
+  font-size: 20px;
+  line-height: 60px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #48494D;
+  background-color: #FBF8F8;
+  background-image: url("../img/arrow_gray.svg");
+  background-size: 12px auto;
+  background-position: 288px 50%;
+  background-repeat: no-repeat;
+  cursor: url("../img/pointer.cur"), url("../img/pointer.png"), pointer;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/close-icon.svg");
+  background-size: 22px 22px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.close:hover,
+.close:focus {
+  cursor: url("../img/pointer.cur"), url("../img/pointer.png"), pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .sm-show {
+    display: inline;
+  }
+
+  .sm-hide {
+    display: none;
+  }
+
+  .modal-inner {
+    width: 320px;
+    height: 568px;
+    background-color: #FFFFFF;
+  }
+
+  .order-inner {
+    padding: 0 16px;
+    text-align: center;
+    background-image: none;
+  }
+
+  .order-inner input {
+    margin: 0 0 20px;
+  }
+
+  .btn {
+    width: 250px;
+    height: 50px;
+    font-size: 10px;
+    line-height: 50px;
+  }
+
+  .btn-show-trip {
+    background-position: 196px center;
+  }
+
+  .header-promo::before {
+    height: 344px;
+  }
+
+  .header-top .container {
+    height: 50px;
+  }
+
+  .header-logo {
+    width: 44px;
+    height: auto;
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+  }
+
+  .header-promo-content {
+    width: 398px;
+    height: 344px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 60px;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: normal;
+  }
+
+  .header-promo-content p {
+    width: 100%;
+    margin: 15px 0;
+    box-sizing: border-box;
+  }
+
+  .all-headers {
+    width: 100%;
+    margin: 80px 0 20px;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .all-headers::after{
+    display: none;
+  }
+
+  .trip-info {
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  .trip-info h2 {
+    margin: 80px 0 20px;
+  }
+
+  .trip-list {
+    margin: 0 -15px;
+    padding: 0;
+  }
+
+  .trip-item {
+    width: 288px;
+    height: 425px;
+    margin: 0px 15px 20px;
+  }
+
+  .trip-item img {
+    width: 288px;
+    height: 425px;
+  }
+
+  .trip-item-title {
+    left: 36.5px;
+  }
+
+  .hover-link {
+    left: 16px;
+    width: 256px;
+  }
+
+  .tabs-and-prices {
+    background-image: none;
+    background-size: 0;
+  }
+
+  .tabs {
+    width: 100%;
+    margin-top: 78px;
+  }
+
+  .tabs label {
+  	width: 153px;
+  }
+
+  .tabs label:first-of-type {
+    margin-right: 35px;
+  }
+
+  .tabs label:last-of-type {
+    margin-left: 35px;
+  }
+
+  .tabs-content {
+    width: 100%;
+    height: 0;
+    text-align: center;
+  }
+
+  .country-info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tabs h3 {
+    width: 100%;
+    margin-top: 48px;
+  }
+
+  .img_bg {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+  }
+
+  .country-comment {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translate(0, -335px);
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-top: 150px;
+  }
+
+  .price-info {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .price-info p {
+    margin-bottom: 30px;
+  }
+
+  .price-info span {
+    width: 100%;
+    margin: 30px 0 10px;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .link-tel-black {
+    padding: 0;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #FE7865;
+    background-image: none;
+    background-size: 0;
+  }
+
+  .link-tel-black:hover {
+    color: #141517;
+  }
+
+  .tariff-list {
+    justify-content: space-between;
+    width: 676px;
+    margin: 0 -25px;
+  }
+
+  .tariff-item {
+    width: 338px;
+    height: 629px;
+    margin: 0 25px;
+    padding: 30px 18px;
+    text-align: center;
+  }
+
+  .tariff-item h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .tariff-item b {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    margin-bottom: 11px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .tariff-item p {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .tariff-item .btn {
+    left: -2px;
+    bottom: -2px;
+    transform: translate(0, 0);
+    width: 288px;
+  }
+
+  .tariff-info li {
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .callback {
+    margin: 125px 0 80px;
+    background-position: 50% 50%;
+  }
+
+  .callback-info {
+    position: relative;
+    top: 70px;
+    left: 0;
+    margin: 0 auto;
+    padding-top: 1px;
+  }
+
+  .page-footer {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5px;
+  }
+
+  .future-trip {
+    margin: 0 0 30px 0;
+    padding-right: 60px;
+  }
+
+  .contacts {
+    flex-basis: 209px;
+    margin: 0 0 30px;
+    padding-left: 60px;
+  }
+
+  .company-trip {
+    flex-basis: 100%;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #D7D9DF;
+    border-left: none;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .p0 {
+    padding: 0;
+  }
+
+  .btn {
+    width: 288px;
+  }
+
+  .btn-show-trip {
+    background-position: 234px center;
+  }
+
+  .menu-icon {
+    width: 50px;
+  }
+
+  .header-promo::before {
+    height: 235px;
+  }
+
+  .header-promo-content {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 235px;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .header-promo-content p {
+    width: 100%;
+    margin: 20px 0;
+    color: #2C2E3F;
+   }
+
+ .all-headers {
+   margin-top: 45px;
+   font-size: 24px;
+ }
+
+ .trip-info {
+   width: 100%;
+ }
+
+ .trip-info h2 {
+   margin-top: 108px;
+ }
+
+ .trip-item {
+   margin-bottom: 35px;
+ }
+
+ .tabs {
+   margin-top: 5px;
+  }
+
+  .img_bg {
+    max-height: 415px;
+  }
+
+  .country-comment {
+    width: 268px;
+    height: 430px;
+    transform: translate(0, -350px);
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .country-comment h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .country-comment h4::after {
+    margin-left: 100px;
+  }
+
+  .country-comment p {
+    margin: 20px 0;
+  }
+
+  .country-comment img {
+    display: table;
+    margin: 0 auto 10px;
+  }
+
+  .country-comment cite {
+    margin-left: 0;
+  }
+
+  .price {
+    margin-top: 225px;
+  }
+
+  .price-info {
+    margin-bottom: 40px;
+  }
+
+  .price-info p {
+    margin: 20px 0;
+  }
+
+  .price-info span {
+    margin: 20px 0 10px;
+  }
+
+  .tariff-list {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+  }
+
+  .tariff-item {
+    width: 288px;
+    margin: 0 10px 30px;
+  }
+
+  .callback {
+    height: 440px;
+    margin: 50px 0 50px;
+    background-color: #FBF8F8;
+    background-image: none;
+    background-size: 0 0;
+  }
+
+  .callback-info {
+    top: 50px;
+    width: auto;
+    height: auto;
+    padding: 0 16px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .callback-form {
+    width: 288px;
+    margin: 0 auto;
+  }
+
+  .callback-form input {
+    width: 288px;
+    margin: 0 0 20px;
+  }
+
+   .page-footer {
+     padding: 0;
+     margin: 0;
+     justify-content: center;
+     text-align: center;
+   }
+
+   .page-footer h3 {
+     margin: 30px 0 20px;
+   }
+
+   .future-trip,
+   .contacts,
+   .company-trip {
+     margin: 0;
+     padding: 0;
+     padding-bottom: 20px;
+     flex-basis: 100%;
+     border: none;
+   }
+
+  .contacts {
+    border-top: 1px solid #D7D9DF;
+    border-bottom: 1px solid #D7D9DF;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .tariff-list {
+    margin: 0;
+  }
+
+  .tariff-item {
+    margin: 0 0 30px;
+  }
+}
