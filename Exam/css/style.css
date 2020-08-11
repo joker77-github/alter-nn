@@ -59,7 +59,6 @@ body {
   display: none;
 }
 
-/* Стили для ссылок и кнопок */
 .link-top {
   font-size: 14px;
   line-height: 17px;
@@ -153,7 +152,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Хедер */
 .header-top {
   background-color: #FFFFFF;
 }
@@ -230,7 +228,6 @@ h1 {
   line-height: 170%;
 }
 
-/* Блок места посещения */
 .all-headers {
   margin: 95px 0 53px;
   padding: 0;
@@ -248,6 +245,10 @@ h1 {
   width: 175px;
   height: 3px;
   background-color: #FE7865;
+}
+
+.trip img {
+  object-fit: cover;
 }
 
 .trip-list {
@@ -325,7 +326,6 @@ h1 {
   display: inline-block;
 }
 
-/* Секция табы */
 .tabs-and-prices {
   background-image: url("../img/map_bg.svg");
   background-size: 1400px auto;
@@ -343,7 +343,7 @@ h1 {
 	border-top: 1px solid rgba(44, 46, 63, 0.3);
 }
 
-.tabs h3 {
+.tabs-content h3 {
   width: 425px;
 }
 
@@ -352,6 +352,7 @@ h1 {
   right: 0;
   top: 0;
   z-index: -10;
+  object-fit: cover;
 }
 
 .country-info {
@@ -360,9 +361,7 @@ h1 {
 }
 
 .tabs-content {
-	/* прикрутим анимацию */
   position: relative;
-  min-height: 596px;
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
@@ -371,7 +370,6 @@ h1 {
 	animation-name: fadeIn;
 }
 
-/* Описываем анимацию свойства opacity */
 @-webkit-keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
@@ -382,23 +380,21 @@ h1 {
 	to {opacity: 1;}
 }
 
-/* Цитаты в табах */
 .country-comment {
   position: absolute;
   top: 298px;
   right: -270px;
   transform: translate(0,-50%);
-  z-index: 1;
+  z-index: 10;
   width: 322px;
-  height: auto;
   margin: 0;
   padding: 30px;
   background-color: #FFFFFF;
 }
 
 .country-comment h4 {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-size: 30px;
   line-height: 37px;
   font-weight: 500;
@@ -437,13 +433,11 @@ h1 {
   color: #2C2E3F;
 }
 
-/* Прячем чекбоксы */
 .tabs input {
 	position: absolute;
   display: none;
 }
 
-/* Стили переключателей вкладок (табов) */
 .tabs label {
 	display: inline-block;
   width: 205px;
@@ -476,7 +470,6 @@ h1 {
 	color: #FE7865;
 }
 
-/* Активация секций с помощью псевдокласса :checked */
 #tab1:checked~#content-tab1,
 #tab2:checked~#content-tab2,
 #tab3:checked~#content-tab3,
@@ -485,7 +478,6 @@ h1 {
 	display: block;
 }
 
-/* Секция цены */
 .price {
   display: -webkit-flex;
   display: -ms-flex;
@@ -564,6 +556,7 @@ h1 {
   bottom: 30px;
   left: 183px;
   transform: translate(-50%, 0);
+  z-index: 20;
   width: 310px;
   text-align: center;
 }
@@ -619,9 +612,6 @@ h1 {
   color: #141517;
 }
 
-/* Форма обратной связи */
-
-/* Цвет placeholder для формы ввода */
 ::-webkit-input-placeholder {color: #141517;}
 ::-moz-placeholder {color: #141517;}
 :-moz-placeholder {color: #141517;}
@@ -720,7 +710,6 @@ h1 {
   line-height: 50px;
 }
 
-/* Футер */
 .page-footer {
   display: -webkit-flex;
   display: -ms-flex;
@@ -776,13 +765,10 @@ h1 {
   padding: 0 35px;
 }
 
-/* Модальные окна */
-
-/*CSS-свойства для заднего фона*/
 .modal {
-  opacity: 0; /*изначально этот блок должен быть прозрачным*/
-  background: rgba(0,0,0,0.7); /*задаём цвет фона*/
-  pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+  opacity: 0;
+  background: rgba(0,0,0,0.7);
+  pointer-events: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -795,8 +781,8 @@ h1 {
 }
 
 .modal:target {
-  opacity: 1; /*при клике блок становится видимым*/
-  pointer-events: auto; /*теперь по блоку можно кликать мышкой*/
+  opacity: 1;
+  pointer-events: auto;
   overflow-y: auto;
 }
 
@@ -899,7 +885,7 @@ h1 {
   cursor: url("../img/pointer.cur"), url("../img/pointer.png"), pointer;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .sm-show {
     display: inline;
   }
@@ -1046,43 +1032,49 @@ h1 {
 
   .tabs-content {
     width: 100%;
-    height: 0;
+    height: 100%;
+  }
+
+  .tabs-content h3 {
+    width: inherit;
     text-align: center;
+    margin-top: 48px;
+  }
+
+  .tabs-content .btn {
+    display: table;
+    margin: 0 auto 30px;
   }
 
   .country-info {
-    width: 100%;
+    width: inherit;
+    text-align: center;
     margin-bottom: 20px;
-  }
-
-  .tabs h3 {
-    width: 100%;
-    margin-top: 48px;
   }
 
   .img_bg {
     position: relative;
-    margin-top: 30px;
-    width: 100%;
-    max-height: 430px;
-    object-fit: cover;
+    width: 768px;
+    height: 415px;
   }
 
   .country-comment {
-    position: relative;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     right: 0;
-    transform: translate(0, -335px);
-    margin: 0 auto;
+    margin-top: 30px;
+    transform: translate(0, 0);
+    max-height: 310px;
     text-align: left;
   }
 
   .price {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 0;
-    margin-top: 150px;
+    margin-top: 0;
   }
 
   .price-info {
@@ -1152,10 +1144,11 @@ h1 {
   }
 
   .tariff-item .btn {
-    left: -2px;
-    bottom: -2px;
+    left: 0;
+    bottom: 0;
     transform: translate(0, 0);
-    width: 288px;
+    align-self: stretch;
+    width: 100%;
   }
 
   .tariff-info li {
@@ -1244,6 +1237,7 @@ h1 {
   .header-promo-content p {
     width: 100%;
     margin: 20px 0;
+    padding: 0 20px;
     color: #2C2E3F;
    }
 
@@ -1268,16 +1262,30 @@ h1 {
    margin-top: 5px;
   }
 
+  .tabs-content {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 500px;
+  }
+
   .img_bg {
-    max-height: 415px;
+    height: 415px;
   }
 
   .country-comment {
-    width: 268px;
-    height: 430px;
-    transform: translate(0, -350px);
+    position: absolute;
+    top: auto;
+    right: auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    width: 258px;
+    padding: 40px 30px;
     text-align: center;
-    box-sizing: border-box;
   }
 
   .country-comment h4 {
@@ -1303,7 +1311,9 @@ h1 {
   }
 
   .price {
-    margin-top: 225px;
+    margin-top: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
   .price-info {
