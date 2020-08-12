@@ -343,25 +343,83 @@ h1 {
 	border-top: 1px solid rgba(44, 46, 63, 0.3);
 }
 
-.tabs-content h3 {
+.tabs-info h3 {
   width: 425px;
+  margin-top: 15px;
 }
 
-.img_bg {
-  position: absolute;
-  right: 0;
+.tabs-info p {
+  width: 385px;
+  margin-bottom: 50px;
+}
+
+.tabs-img {
+  position: relative;
   top: 0;
+  right: 0;
+  width: 430px;
+  height: 596px;
   z-index: -10;
   object-fit: cover;
 }
 
-.country-info {
-  width: 380px;
-  margin-bottom: 50px;
+.tabs-quota {
+  position: absolute;
+  align-self: center;
+  right: -112px;
+  width: 322px;
+  padding: 30px;
+  background-color: #FFFFFF;
+}
+
+.tabs-quota h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500;
+  color: #2C2E3F;
+}
+
+.tabs-quota h4::after {
+  display: table;
+  content: "";
+  width: 68px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #FE7865;
+}
+
+.tabs-quota p {
+  margin: 32px 0 35px;
+  font-size: 14px;
+  line-height: 200%;
+}
+
+.tabs-quota img {
+  border-radius: 50%;
+}
+
+.tabs-quota cite {
+  display: inline-block;
+  vertical-align: top;
+  height: 38px;
+  padding: 0;
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 38px;
+  font-style: normal;
+  font-weight: 500;
+  color: #2C2E3F;
 }
 
 .tabs-content {
   position: relative;
+  margin-top: 80px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
@@ -378,59 +436,6 @@ h1 {
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
-}
-
-.country-comment {
-  position: absolute;
-  top: 298px;
-  right: -270px;
-  transform: translate(0,-50%);
-  z-index: 10;
-  width: 322px;
-  margin: 0;
-  padding: 30px;
-  background-color: #FFFFFF;
-}
-
-.country-comment h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  line-height: 37px;
-  font-weight: 500;
-  color: #2C2E3F;
-}
-
-.country-comment h4::after {
-  display: table;
-  content: "";
-  width: 68px;
-  height: 1px;
-  margin-top: 10px;
-  background-color: #FE7865;
-}
-
-.country-comment p {
-  margin: 32px 0 35px;
-  font-size: 14px;
-  line-height: 200%;
-}
-
-.country-comment img {
-  border-radius: 50%;
-}
-
-.country-comment cite {
-  display: inline-block;
-  vertical-align: top;
-  height: 38px;
-  padding: 0;
-  margin-left: 15px;
-  font-size: 16px;
-  line-height: 38px;
-  font-style: normal;
-  font-weight: 500;
-  color: #2C2E3F;
 }
 
 .tabs input {
@@ -839,8 +844,8 @@ h1 {
 
 .menu-inner {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 10px;
+  right: 5px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -1031,43 +1036,38 @@ h1 {
   }
 
   .tabs-content {
-    width: 100%;
-    height: 100%;
-    overflow-x: auto; /* для горизонтального скролла */
-    -webkit-overflow-scrolling: touch; /* для плавной прокрутки */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 17px;
   }
 
-  .tabs-content h3 {
+  .tabs-info h3 {
     width: inherit;
-    text-align: center;
-    margin-top: 48px;
   }
 
-  .tabs-content .btn {
-    display: table;
-    margin: 0 auto 30px;
-  }
-
-  .country-info {
+  .tabs-info p {
     width: inherit;
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .img_bg {
-    position: relative;
-    width: 768px;
+  .tabs-img {
+    width: 100vw;
     height: 415px;
+    margin-bottom: -415px;
   }
 
-  .country-comment {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-top: 30px;
-    transform: translate(0, 0);
-    max-height: 310px;
-    text-align: left;
+  .tabs-info .btn {
+    display: table;
+    margin: 0 auto 30px;
+  }
+
+  .tabs-quota {
+    top: 0;
+    left: 0;
+    position: relative;
+    min-height: 275px;
+    margin: 80px 0;
   }
 
   .price {
@@ -1083,6 +1083,10 @@ h1 {
     width: 100%;
     margin-bottom: 30px;
     text-align: center;
+  }
+
+  .price-info h2 {
+    margin-top: 0;
   }
 
   .price-info p {
@@ -1264,51 +1268,33 @@ h1 {
    margin-top: 5px;
   }
 
-  .tabs-content {
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 500px;
-  }
-
-  .img_bg {
-    height: 415px;
-  }
-
-  .country-comment {
-    position: absolute;
-    top: auto;
-    right: auto;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-direction: column;
-    width: 258px;
-    padding: 40px 30px;
+  .tabs-quota {
+    width: 228px;
+    min-height: 330px;
+    margin: 45px 0;
+    padding: 20px;
     text-align: center;
   }
 
-  .country-comment h4 {
+  .tabs-quota h4 {
     font-size: 20px;
     line-height: 24px;
   }
 
-  .country-comment h4::after {
+  .tabs-quota h4::after {
     margin-left: 100px;
   }
 
-  .country-comment p {
+  .tabs-quota p {
     margin: 20px 0;
   }
 
-  .country-comment img {
+  .tabs-quota img {
     display: table;
     margin: 0 auto 10px;
   }
 
-  .country-comment cite {
+  .tabs-quota cite {
     margin-left: 0;
   }
 
