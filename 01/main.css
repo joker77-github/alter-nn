@@ -1,7 +1,7 @@
 .page-header {
   width: 100%;
   height: 100vh;
-  background: #090c35 url("../../img/bg_top.jpg") 50% 0%/cover no-repeat;
+  background: #090c35 url("img/bg_top.jpg") 50% 0%/cover no-repeat;
   text-transform: uppercase;
   color: #fff;
 }
@@ -160,11 +160,11 @@
   filter: alpha(opacity=70);
 }
 .btn-astore {
-  background-image: url("../../img/icon-astore.png");
+  background-image: url("img/icon-astore.png");
   background-size: 30px 34px;
 }
 .btn-gplay {
-  background-image: url("../../img/icon-gplay.png");
+  background-image: url("img/icon-gplay.png");
   background-size: 34px 36px;
 }
 .owl-dots {
@@ -462,7 +462,7 @@ body {
   width: 100%;
   height: 100vh;
   text-transform: uppercase;
-  background: #090c35 url("../../img/bg_bottom.jpg") 50% 0%/cover no-repeat;
+  background: #090c35 url("img/bg_bottom.jpg") 50% 0%/cover no-repeat;
 }
 .footer-grid {
   display: grid;
@@ -601,13 +601,13 @@ body {
   filter: alpha(opacity=70);
 }
 .fb {
-  background: url("../../img/icon-fb.svg") 50% 50%/14px 27px no-repeat;
+  background: url("img/icon-fb.svg") 50% 50%/14px 27px no-repeat;
 }
 .tw {
-  background: url("../../img/icon-tw.svg") 50% 50%/27px 22px no-repeat;
+  background: url("img/icon-tw.svg") 50% 50%/27px 22px no-repeat;
 }
 .in {
-  background: url("../../img/icon-in.svg") 50% 50%/24px 24px no-repeat;
+  background: url("img/icon-in.svg") 50% 50%/24px 24px no-repeat;
 }
 .copyright {
   display: none;
