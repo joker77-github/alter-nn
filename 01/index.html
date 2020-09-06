@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apps for athlets and coaches</title>
-  <link href="style/fonts/PN400.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link href="style/fonts/PN700.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <!-- <link rel="stylesheet" href="style/css/main.css"> -->
+  <link href="fonts/PN400.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/PN700.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link rel="stylesheet" href="owl.carousel.min.css" />
   <link rel="stylesheet" href="main.css">
+  <!-- <link rel="stylesheet" href="my_own.css"> -->
+  <!-- <link rel="stylesheet" href="main.css"> -->
 </head>
 
 <body>
@@ -48,32 +49,29 @@
       <div class="athlets__img">
         <img src="img/f-player.png" alt="Soccer player">
       </div>
-      <div class="advant-sw">
-        <ul class="advant">
-          <li class="advant__item">
-            <div class="advant__wraper">
-              <span class="advant__number">01</span>
-              <h2 class="advant__title">Connection</h2>
-              <p class="advant__text">Connect with coaches directly, you can ping coaches to view profile.</p>
-            </div>
-          </li>
-          <li class="advant__item advant__item--grey">
-            <div class="advant__wraper">
-              <span class="advant__number">02</span>
-              <h2 class="advant__title">Collaboration</h2>
-              <p class="advant__text">Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. this is the team work aspect to surface 1.</p>
-            </div>
-          </li>
-          <li class="advant__item advant__item--mv">
-            <div class="advant__wraper">
-              <span class="advant__number advant__number--bw">03</span>
-              <h2 class="advant__title">Growth</h2>
-              <p class="advant__text">Resources and tools for you to get better as a student athlete. Access to training classes, tutor sessions, etc.</p>
-            </div>
-          </li>
-        </ul>
-        <!-- <div class="swiper-pagination"></div> -->
-      </div>
+      <ul class="advant">
+        <li class="advant__item item">
+          <div class="advant__wraper">
+            <span class="advant__number">01</span>
+            <h2 class="advant__title">Connection</h2>
+            <p class="advant__text">Connect with coaches directly, you can ping coaches to view profile.</p>
+          </div>
+        </li>
+        <li class="advant__item advant__item--grey item">
+          <div class="advant__wraper">
+            <span class="advant__number">02</span>
+            <h2 class="advant__title">Collaboration</h2>
+            <p class="advant__text">Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. this is the team work aspect to surface 1.</p>
+          </div>
+        </li>
+        <li class="advant__item advant__item--mv item">
+          <div class="advant__wraper">
+            <span class="advant__number advant__number--bw">03</span>
+            <h2 class="advant__title">Growth</h2>
+            <p class="advant__text">Resources and tools for you to get better as a student athlete. Access to training classes, tutor sessions, etc.</p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section class="players">
@@ -81,32 +79,29 @@
       <div class="players__img">
         <img src="img/b-player.png" alt="Basketball player">
       </div>
-      <div class="advant-sw">
-        <ul class="advant">
-          <li class="advant__item">
-            <div class="advant__wraper">
-              <span class="advant__number">01</span>
-              <h2 class="advant__title">Connection</h2>
-              <p class="advant__text">Connect with talented athlete directly, you can watch their skills through video showreels directly from surface 1.</p>
-            </div>
-          </li>
-          <li class="advant__item advant__item--grey">
-            <div class="advant__wraper">
-              <span class="advant__number">02</span>
-              <h2 class="advant__title">Collaboration</h2>
-              <p class="advant__text">Work with recruiter to increase your chances of finding talented athlete.</p>
-            </div>
-          </li>
-          <li class="advant__item advant__item--dw">
-            <div class="advant__wraper">
-              <span class="advant__number advant__number--vw">03</span>
-              <h2 class="advant__title">Growth</h2>
-              <p class="advant__text advant__text--w">Save your time, recruit proper athlets for your team.</p>
-            </div>
-          </li>
-        </ul>
-        <!-- <div class="swiper-pagination"></div> -->
-      </div>
+      <ul class="advant">
+        <li class="advant__item item">
+          <div class="advant__wraper">
+            <span class="advant__number">01</span>
+            <h2 class="advant__title">Connection</h2>
+            <p class="advant__text">Connect with talented athlete directly, you can watch their skills through video showreels directly from surface 1.</p>
+          </div>
+        </li>
+        <li class="advant__item advant__item--grey item">
+          <div class="advant__wraper">
+            <span class="advant__number">02</span>
+            <h2 class="advant__title">Collaboration</h2>
+            <p class="advant__text">Work with recruiter to increase your chances of finding talented athlete.</p>
+          </div>
+        </li>
+        <li class="advant__item advant__item--dw item">
+          <div class="advant__wraper">
+            <span class="advant__number advant__number--vw">03</span>
+            <h2 class="advant__title">Growth</h2>
+            <p class="advant__text advant__text--w">Save your time, recruit proper athlets for your team.</p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section class="to-all">
@@ -174,16 +169,30 @@
 
   </main>
 
-
-  <script type="text/javascript" src="my_own.js"></script>
-
-  <!-- Swiper JS -->
-  <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
   <script type="text/javascript">
-    var swiper = new Swiper('.swiper-container');
+  var sWrapper = document.querySelectorAll('.advant');
+
+  if (document.body.clientWidth<480){
+    for (var i = 0; i < sWrapper.length; i++) {
+    sWrapper[i].classList.add('owl-carousel');
+    };
+  }
   </script>
+
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        pagination: true
+      });
+    });
+  </script>
+
 
 </body>
 
