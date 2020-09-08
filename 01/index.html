@@ -169,17 +169,26 @@
 
   <script type="text/javascript">
   var sWrapper = document.querySelectorAll('.advant');
-
-  if (document.body.clientWidth<480){
+  var mql = window.matchMedia("(orientation: portrait)");
+  if(mql.matches) {
     for (var i = 0; i < sWrapper.length; i++) {
-    sWrapper[i].classList.add('owl-carousel');
+      sWrapper[i].classList.add('owl-carousel');
     };
+  } else {
+    // Горизонтальная ориентация
   }
-  else {
-    sWrapper[i].classList.remove('owl-carousel');
-  }
+  // Прослушка события изменения ориентации
+  mql.addListener(function(m) {
+      if(m.matches) {
+        window.location.reload();
+          // Изменено на портретный режим
+      }
+      else {
+        window.location.reload();
+          // Изменено на горизонтальный режим
+      }
+  });
   </script>
-
   <script src="jquery-3.5.1.min.js"></script>
   <script src="owl.carousel.min.js"></script>
 

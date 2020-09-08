@@ -190,21 +190,21 @@
 }
 @font-face {
   font-family: "ProximaNova";
-  src: url("../fonts/PN400.woff2") format("woff2"), url("../fonts/PN400.woff") format("woff");
+  src: url("fonts/PN400.woff2") format("woff2"), url("fonts/PN400.woff") format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "ProximaNova";
-  src: url("../fonts/PN600.woff2") format("woff2"), url("../fonts/PN600.woff") format("woff");
+  src: url("fonts/PN600.woff2") format("woff2"), url("fonts/PN600.woff") format("woff");
   font-display: swap;
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "ProximaNova";
-  src: url("../fonts/PN700.woff2") format("woff2"), url("../fonts/PN700.woff") format("woff");
+  src: url("fonts/PN700.woff2") format("woff2"), url("fonts/PN700.woff") format("woff");
   font-display: swap;
   font-weight: 700;
   font-style: normal;
