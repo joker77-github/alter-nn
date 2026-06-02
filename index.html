@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords"
     content="медицинские конференции, Нижний Новгород, Альтернатива, неонатология, гериатрия, ревматология">
   <meta name="description"
@@ -102,10 +102,27 @@
 
       <h2>Прошедшие конференции:</h2>
       <details>
-        <summary style="margin-bottom: 50px; cursor: pointer;">Посмотреть прошедшие конференции</summary>
-        <ul class="conf-list">
+        <summary>Посмотреть прошедшие конференции</summary>
+
+        <form name="sorting">
+          <label for="theme">Фильтровать по направлению:</label>
+          <select id="theme" name="theme">
+            <option value="all" selected="selected">Все</option>
+            <option value="neonat">Неонатология</option>
+            <option value="geront">Геронтология</option>
+            <option value="osteo">Остеопороз</option>
+          </select>
+          <br>
+          <label for="date">Сортировать по дате:</label>
+          <select id="date" name="date">
+            <option value="desc" selected="selected">По убыванию</option>
+            <option value="asc">По возрастанию</option>
+          </select>
+        </form>
+
+        <ul id="conf-list" class="conf-list">
           <!-- 2025 Остеопороз и остеоартрит: есть ли взаимосвязь? -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2025-11-26" aria-label="osteo">
             <div class="images">
               <img src="../images/old_lady.jpg" width="300" alt="-">
             </div>
@@ -121,7 +138,7 @@
           </li>
 
           <!-- 2025 Медицина здорового долголетия -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2025-10-15" aria-label="geront">
             <div class="images">
               <img src="../images/doc&old_lady.jpg" width="300" alt="-">
             </div>
@@ -134,7 +151,7 @@
           </li>
 
           <!-- 2025 Мать и дитя -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2025-09-24" aria-label="neonat">
             <div class="images">
               <img src="../images/mother.jpg" width="300" alt="-">
             </div>
@@ -149,7 +166,7 @@
           </li>
 
           <!-- 2024 Остеопороз - многофакторная проблема -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2024-11-27" aria-label="osteo">
             <div class="images">
               <img src="../images/old_lady.jpg" width="300" alt="-">
             </div>
@@ -180,7 +197,7 @@
           </li>
 
           <!-- 2024 Гериатрия на клинических примерах -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2024-10-31" aria-label="geront">
             <div class="images">
               <img src="../images/doc&old_lady.jpg" width="300" alt="-">
             </div>
@@ -212,7 +229,7 @@
           </li>
 
           <!-- 2024 Мать и дитя -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2024-09-24" aria-label="neonat">
             <div class="images">
               <img src="../images/mother.jpg" width="300" alt="-">
             </div>
@@ -240,7 +257,7 @@
           </li>
 
           <!-- 2023 Остеопороз - многофакторная проблема -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2023-11-23" aria-label="osteo">
             <div class="images">
               <img src="../images/old_lady.jpg" width="300" alt="-">
             </div>
@@ -276,7 +293,7 @@
           </li>
 
           <!-- 2023 Гериатрия на клинических примерах -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2023-10-20" aria-label="geront">
             <div class="images">
               <img src="../images/doc&old_lady.jpg" width="300" alt="-">
             </div>
@@ -309,7 +326,7 @@
           </li>
 
           <!-- 2023 Мать и дитя -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2023-09-21" aria-label="neonat">
             <div class="images">
               <img src="../images/mother.jpg" width="300" alt="-">
             </div>
@@ -340,7 +357,7 @@
           </li>
 
           <!-- 2022 Медицина старшего поколения -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2022-10-22" aria-label="geront">
             <div class="images">
               <img src="images/training.jpg" width="300" alt="-">
             </div>
@@ -383,7 +400,7 @@
           </li>
 
           <!-- 2022 Мать и дитя -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2022-09-21" aria-label="neonat">
             <div class="images">
               <img src="images/mother.jpg" width="300" alt="-">
             </div>
@@ -421,7 +438,7 @@
           </li>
 
           <!-- 2021 Остеопороз -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2021-11-18" aria-label="osteo">
             <span class="alert">Онлайн!</span>
             <div class="images">
               <img src="images/osteo.jpg" width="300" alt="-">
@@ -460,7 +477,7 @@
           </li>
 
           <!-- 2021 Здоровье и жизнь возрастных пациентов -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2021-10-20" aria-label="geront">
             <div class="images">
               <img src="images/nurse.jpg" width="300" alt="-">
             </div>
@@ -492,7 +509,7 @@
           </li>
 
           <!-- 2021 Мать и дитя -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2021-09-29" aria-label="neonat">
             <div class="images">
               <img src="images/kidneys.jpg" width="300" alt="-">
             </div>
@@ -533,7 +550,7 @@
           </li>
 
           <!-- 2020 Формула активного долголетия -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2020-11-21" aria-label="geront">
             <div class="images">
               <img src="images/ger.jpg" width="300" alt="-">
             </div>
@@ -566,7 +583,7 @@
           </li>
 
           <!-- 2020 Остеопороз -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2020-11-07" aria-label="osteo">
             <div class="images">
               <img src="images/revm.jpg" width="300" alt="-">
             </div>
@@ -591,7 +608,7 @@
           </li>
 
           <!-- 2020 Мать и дитя -->
-          <li class="conf-item">
+          <li class="conf-item" data-time="2020-10-23" aria-label="neonat">
             <div class="images">
               <img src="images/child.jpg" width="300" alt="-">
             </div>
@@ -662,3 +679,41 @@
 </body>
 
 </html>
+
+<script>
+  const confList = document.querySelector('#conf-list');
+  const confItems = confList.querySelectorAll('[data-time]');
+  const themeFilter = document.querySelector('#theme');
+  const dateSort = document.querySelector('#date');
+
+  function comparator(a, b) {
+    if (b.dataset.time < a.dataset.time)
+      return -1;
+    if (b.dataset.time > a.dataset.time)
+      return 1;
+    return 0;
+  }
+
+  function comparator1(a, b) {
+    if (a.dataset.time < b.dataset.time)
+      return -1;
+    if (a.dataset.time > b.dataset.time)
+      return 1;
+    return 0;
+  }
+
+  themeFilter.addEventListener('change', () => {
+    const selectedOption = themeFilter.options[themeFilter.selectedIndex].value;
+
+    if (selectedOption === 'all') confItems.forEach(item => item.hidden = false)
+    else confItems.forEach(item => item.hidden = item.ariaLabel !== selectedOption);
+  });
+
+  dateSort.addEventListener('change', () => {
+    const selectedOption = dateSort.options[dateSort.selectedIndex].value;
+    var confArray = Array.from(confItems);
+    let sorted = confArray.sort(selectedOption === 'desc' ? comparator : comparator1);
+    sorted.forEach(item => confList.appendChild(item));
+  });
+
+</script>
