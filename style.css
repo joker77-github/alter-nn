@@ -557,17 +557,15 @@ select {
     border: 2px dotted #f24048
 }
 
-.year-link {
-    display: inline-block;
-    padding: 5px 10px;
+.prev-conf {
+    display: block;
+    padding-block: 5px;
     color: black;
     text-decoration: none;
-    transition: transform 0.3s ease
 }
 
-.year-link:hover {
+.prev-conf:hover {
     color: #f24048;
-    transform: scale(120%)
 }
 
 .conf-table {
