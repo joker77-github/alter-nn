@@ -570,7 +570,9 @@ select {
 
 .conf-table {
     border: 1px solid black;
+    width: 100%;
     margin-inline: auto;
+    margin-top: 20px;
 }
 
 .conf-table h3 {
@@ -584,12 +586,20 @@ th {
 }
 
 td {
-    padding-inline: 15px;
+    padding-inline: 7.5px;
     border: 1px solid black;
+}
+
+td:first-child {
+    min-width: 80px;
 }
 
 .table-link {
     color: #444;
+}
+
+.table-link:hover {
+    color: #f24048;
 }
 
 .card-list {
@@ -643,6 +653,10 @@ td {
 
     .quota p {
         padding-top: 0
+    }
+
+    .conf-table {
+        width: auto;
     }
 }
 
